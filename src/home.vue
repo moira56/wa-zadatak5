@@ -59,7 +59,7 @@ export default {
   },
   async mounted() {
     try {
-      const response = await axios.get("http://localhost:3030/pizze");
+      const response = await axios.get("http://localhost:3071/pizze");
       this.pizze = response.data;
     } catch (error) {
       console.error("Greška pri dohvaćanju podataka:", error);

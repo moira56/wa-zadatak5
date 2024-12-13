@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb';
 import { config } from 'dotenv';
-config();
+config({ path: './server/.env' });
+
 
 const mongoURI = process.env.MONGO_URI;
 const db_name = process.env.DB_NAME;
@@ -10,13 +11,13 @@ async function connectToDatabase() {
         const client = new MongoClient(mongoURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            tlsAllowInvalidCertificates: true // Ignoriraj neispravne SSL certifikate
-        }); // stvaramo novi klijent
+            tlsAllowInvalidCertificates: true 
+        }); 
 
-        await client.connect(); // spajamo se na klijent
+        await client.connect(); 
         console.log('Uspješno spajanje na bazu podataka');
         
-        let db = client.db(db_name); // odabiremo bazu podataka
+        let db = client.db(db_name); 
         return db;
     } catch (error) {
         console.error('Greška prilikom spajanja na bazu podataka', error);

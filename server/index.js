@@ -3,7 +3,7 @@ import cors from 'cors';
 import { connectToDatabase } from './db.js';
 
 const app = express();
-const PORT = 3030;
+const PORT = 3071;
 
 app.use(express.json());
 app.use(cors());
