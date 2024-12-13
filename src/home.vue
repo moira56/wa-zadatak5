@@ -105,9 +105,9 @@ export default {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #5b626cf9; /* Tamno žuta boja */
+  background-color: #5b626cf9; 
   color: #eae6e6;
-  font-size: 1.2rem; /* Malo veći font */
+  font-size: 1.2rem; 
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -117,7 +117,7 @@ export default {
 }
 
 .order-button:hover {
-  background-color: #6e6680; /* Tamnija nijansa za hover */
+  background-color: #6e6680; 
   color: #fff;
 }
 
